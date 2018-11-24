@@ -16,24 +16,19 @@ $(document).ready(function () {
             .then(function (response) {
                 console.log(response);
                 var results = response.data;
-                console.log(results);
+                
+                // var still = results[i].images.fixed_height_still.url;
 
                 for (var i = 0; i < results.length; i++) {
-                    // var start = response.data[i].images.fixed_height.url;
-                    // var still = response.data[i].images.fixed_height_still.url;
+                    
 
                     var moviesDiv = $("<div>");
                     var p = $("<p>").text("Rating: " + results[i].rating);
                     var moviesImage = $("<img>");
-                    // moviesImage.attr("data-gif", start);
-                    // moviesImage.attr("data-still", still);
-                    // moviesImage.attr("data-state", "gif");
-                    // moviesImage.addClass("movieImage");
+                    moviesImage.addClass("movies-image")
                     moviesImage.attr("src", results[i].images.fixed_height.url);
-
                     moviesDiv.append(p);
                     moviesDiv.append(moviesImage);
-
                     $("#gifs").prepend(moviesDiv);
                 }
             });
@@ -58,27 +53,29 @@ $(document).ready(function () {
     $(document).on("click", ".movies-btn", function () {
         var movies = $(this).attr("data-name");
         console.log(movies)
-        showGifs();
+        showGifs(movies);
     });
 
-    // $(".buttons").click(function (event) {
-    //     event.preventDefault();
-    //     var topic = $("#hero-input").val().trim();
-    //     if (topic.length > 2) {
-    //         topics.push(topic)
-    //     };
-    //     displayButtons();
+    // $(document).on("click", ".movies-image", function() {
+    //     var image= $(this).attr("data-state");
+    //     if (image === still) {
+    //         $(this).attr("src", $(this).attr("data-animate"));
+    //         $(this).attr("data-state", "animate");
+    //       } else {
+    //         $(this).attr("src", $(this).attr("data-still"));
+    //         $(this).attr("data-state", "still");
+    //       }
     // });
 
-    // $(document).on("click", ".movies-btn", function () {
-    //     var movieName = $(this).data("name");
-    //     console.log(movieName);
-    //     console.log($(this));
-    //     displayHeroes(movieName);
+    
 
-    // });
-
-
+    $("#add-movie").on("click", function(event) {
+        event.preventDefault();
+        var newMovie = $("#movie-input").val().trim();
+        topics.push(newMovie);
+        displayButtons();
+    });
+    displayButtons();
 
 
 
