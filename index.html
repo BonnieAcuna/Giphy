@@ -1,30 +1,111 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Giphy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    
+
 </head>
+
 <body>
-     <h1>Christmas Movies Gifs</h1>  
-        
-     <div id="movies"></div> 
-        
-     <div id="gifs"></div>
 
-     <form id="movie-form">
-            <label for="movie-input"></label>
-            <input type="text" id="movie-input"><br>
-      
-            <input id="add-movie" type="submit" value="Add a Movie">
-          </form>
-      
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/app.js"></script>
+    <div class="jumbotron">
+        <h1>Christmas Movie Gifs</h1>
+        <img src="assets/images/Christmastrees.png" class="trees">
+        <img src="assets/images/snow.png" class="snow">
+        <img src="assets/images/Christmastree2.png" class="tree">
+        <img src="assets/images/holly.png" class="holly">
+    </div>
+    <div class="container-fluid">
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">
+                ❄
+            </div>
+            <div class="snowflake">
+                ❅
+            </div>
+            <div class="snowflake">
+                ❆
+            </div>
+            <div class="snowflake">
+                ❄
+            </div>
+            <div class="snowflake">
+                ❅
+            </div>
+            <div class="snowflake">
+                ❆
+            </div>
+            <div class="snowflake">
+                ❄
+            </div>
+            <div class="snowflake">
+                ❅
+            </div>
+            <div class="snowflake">
+                ❆
+            </div>
+            <div class="snowflake">
+                ❄
+            </div>
+        </div>
+       
+            <div class="col-md-10">
+                <div class="top-bar-container">
+                    <div class="button-container">
+                        <div id="movies"></div>
+                    </div>
+                    
+                    <div class="form-container">
+                            <form id="movie-form">
+                                <label for="movie-input"></label>
+                                <input type="text" id="movie-input"><br>
+
+                                <input id="add-movie" class="btn btn-danger" type="submit" value="Add a Movie">
+                            </form>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="gif-image-container">
+                <div id="gifs"></div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
